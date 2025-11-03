@@ -9,7 +9,7 @@
 /* Header Section */
 
 .hero {
-  background: url("../Images/house_image.png") center/cover no-repeat;
+  background: url("../images/house_image.png") center/cover no-repeat;
   height: 70vh;
   color: white;
   display: flex;
