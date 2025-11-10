@@ -1,0 +1,76 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'inter', sans-serif;
+}
+
+/* Hero Section */
+.hero {
+  background: url("../images/house_image.png") center/cover no-repeat;
+  height: 70vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Hero Content */
+.hero-content h1 {
+  font-size: 3rem;
+  line-height: 1.4;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content .btn-success {
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+/* Property Cards */
+.property-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.property-card .btn-success {
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-weight: 600;
+}
+
+/* Easy Method Section */
+.easy-method h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.easy-method p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.easy-method .btn-success {
+  border-radius: 30px;
+}
+
+/* Steps Section */
+.step img {
+  margin-bottom: 15px;
+}
+
+/* Footer */
+footer a:hover {
+  color: #3fdfaf;
+}
+
+.footer-logo {
+  width: 90px;
+}
