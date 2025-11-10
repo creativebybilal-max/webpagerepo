@@ -1,6 +1,6 @@
-/* =============================
-   General Reset & Body
-============================= */
+/* ===================================
+   General Reset
+=================================== */
 * {
   margin: 0;
   padding: 0;
@@ -12,65 +12,31 @@ body {
   overflow-x: hidden;
 }
 
-/* =============================
-   Hero Section
-============================= */
+/* ===================================
+   Header Section
+=================================== */
 .hero {
   background: url("../images/house_image.png") center/cover no-repeat;
   height: 70vh;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
 }
 
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  transform: translateY(-50%);
+/* ===================================
+   Navigation Bar
+=================================== */
+.navbar {
+  padding: 10px 60px !important;
+  background: rgba(49, 49, 49, 0.3) !important;
+  backdrop-filter: blur(6px);
 }
 
-.hero-content h1 {
-  font-size: 3rem;
-  line-height: 1.4;
-}
-
-.hero-content p {
-  font-size: 1.3rem;
-  margin-bottom: 20px;
-}
-
-.explore-btn {
-  background: #3fdfaf;
-  color: black;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 30px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.explore-btn:hover {
-  background: white;
-}
-
-/* =============================
-   Navbar Buttons & Links
-============================= */
-.try-now-btn {
-  background: transparent;
-  color: #fff;
-  border: 2px solid #3fdfaf;
-  border-radius: 50px;
-  padding: 10px 25px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.try-now-btn:hover {
-  background: #3fdfaf;
-  color: #000;
+.logo {
+  width: 80px;
+  margin-right: 10px;
 }
 
 .nav-link {
@@ -83,12 +49,80 @@ body {
   color: #3fdfaf !important;
 }
 
-/* =============================
+.try-now-btn {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #3fdfaf;
+  border-radius: 50px;
+  padding: 10px 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.try-now-btn:hover {
+  background: #3fdfaf;
+  color: #000;
+}
+
+/* ===================================
+   Hero Content
+=================================== */
+.hero-content {
+  position: absolute;
+  top: 60%;
+  left: 5%;
+  transform: translateY(-65%);
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  line-height: 1.4;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.explore-btn {
+  background: #3fdfaf;
+  color: black;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.explore-btn:hover {
+  background: white;
+}
+
+/* ===================================
    Most Viewed Section
-============================= */
+=================================== */
 .most-viewed {
   padding: 80px 0;
   background-color: #f8f8f8;
+  text-align: center;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.section-title p {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 50px;
 }
 
 .property-card {
@@ -117,16 +151,18 @@ body {
 .property-card p {
   color: #666;
   font-size: 0.95rem;
+  margin-bottom: 15px;
 }
 
 .btn-view {
+  display: inline-block;
+  margin-bottom: 20px;
   background: #3fdfaf;
   color: black;
   padding: 10px 25px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
-  display: inline-block;
   transition: background 0.3s ease;
 }
 
@@ -135,11 +171,12 @@ body {
   border: 2px solid #3fdfaf;
 }
 
-/* =============================
+/* ===================================
    Easy Method Section
-============================= */
+=================================== */
 .easy-method {
-  padding: 100px 0;
+  padding: 100px 10%;
+  background-color: #ffffff;
 }
 
 .easy-text h2 {
@@ -157,11 +194,12 @@ body {
 
 .easy-text .btn {
   background: #3fdfaf;
-  color: #000;
+  color: #000000;
   padding: 12px 30px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 500;
+  transition: background 0.3s ease;
 }
 
 .easy-text .btn:hover {
@@ -171,28 +209,35 @@ body {
 .easy-image img {
   width: 100%;
   border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* =============================
+/* ===================================
    Work in 3 Steps
-============================= */
+=================================== */
 .work-steps {
-  padding: 100px 0;
+  text-align: center;
+  padding: 100px 20px;
   background-color: #f8f8f8;
+}
+
+.work-steps h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 60px;
 }
 
 .step {
   background: #fff;
   border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 40px 25px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .step:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .step img {
@@ -203,21 +248,31 @@ body {
 
 .step h3 {
   font-size: 1.3rem;
+  color: #222;
   margin-bottom: 10px;
 }
 
 .step p {
   color: #666;
   font-size: 0.95rem;
+  line-height: 1.6;
 }
 
-/* =============================
+/* ===================================
    Footer
-============================= */
+=================================== */
 footer {
   background-color: #000;
   color: #fff;
   padding: 40px 0 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .footer-logo {
@@ -227,14 +282,20 @@ footer {
 
 .footer-container h3 {
   margin-bottom: 15px;
+  color: #fff;
 }
 
 .footer-container p,
 .footer-container li,
 .footer-container a {
   color: #ccc;
-  font-size: 14px;
   text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
 }
 
 .footer-links li {
@@ -245,13 +306,13 @@ footer {
   color: #fff;
 }
 
-.social-icons img {
+.social-icons a img {
   width: 25px;
   margin-right: 15px;
   transition: transform 0.3s;
 }
 
-.social-icons img:hover {
+.social-icons a img:hover {
   transform: scale(1.2);
 }
 
@@ -262,9 +323,9 @@ footer {
   color: #999;
 }
 
-/* =============================
+/* ===================================
    Responsive Tweaks
-============================= */
+=================================== */
 @media (max-width: 992px) {
   .hero-content h1 {
     font-size: 2.2rem;
@@ -275,6 +336,6 @@ footer {
   }
 
   .easy-method {
-    padding: 60px 0;
+    padding: 60px 5%;
   }
 }
