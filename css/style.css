@@ -8,27 +8,26 @@
 
 /* Header Section */
 .hero {
-  background: url("../images/house_image.png") center/cover no-repeat;
-  height: 70vh;
-  color: white;
   display: flex;
+  justify-content: center;  /* horizontal center */
+  align-items: center;      /* vertical center */
+  text-align: center;
   flex-direction: column;
-  justify-content: center; /* Center vertically */
-  align-items: center;     /* Center horizontally */
-  text-align: center;      /* Text centered */
+  height: 70vh;
+  background: url("../images/house_image.png") center/cover no-repeat;
+  color: white;
   position: relative;
 }
 
 /* Navigation Bar */
 .navbar {
   display: flex;
-  justify-content: center; /* Center navbar content */
+  justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 60px;
   background: rgba(49, 49, 49, 0.3);
   backdrop-filter: blur(6px);
   width: 100%;
-  gap: 30px; /* Space between logo, links, and button */
 }
 
 .logo-area {
@@ -38,13 +37,22 @@
 
 .logo {
   width: 80px;
+  margin-right: 20px;
 }
 
-/* Nav links */
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+}
+
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px; /* Even spacing */
+}
+
+.nav-links li {
+  margin: 0 15px;
 }
 
 .nav-links a {
@@ -76,19 +84,15 @@
 }
 
 /* Header Content */
-.hero-content {
-  color: #fff;
-}
-
 .hero-content h1 {
   font-size: 3rem;
   line-height: 1.4;
-  margin-bottom: 15px;
 }
 
 .hero-content p {
   font-size: 1.3rem;
   margin-bottom: 20px;
+  line-height: 1.7;
 }
 
 .explore-btn {
@@ -100,7 +104,7 @@
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease
+  transition: background 0.3s ease;
 }
 
 .explore-btn:hover {
@@ -109,7 +113,7 @@
 
 /* Most Viewed Section */
 .most-viewed {
-  padding: 80px 20px;
+  padding: 80px 60px;
   background-color: #f8f8f8;
   text-align: center;
 }
@@ -181,20 +185,19 @@
   border: 2px solid #3fdfaf;
 }
 
-/* The Easiest Method Section */
+/* Easy Method Section */
 .easy-method {
   display: flex;
-  flex-direction: column;
-  align-items: center;  /* Center horizontally */
-  justify-content: center;
-  padding: 100px 20px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 10%;
   background-color: #ffffff;
-  text-align: center;
+  flex-wrap: wrap;
 }
 
 .easy-text {
-  max-width: 600px;
-  margin-bottom: 30px;
+  flex: 1;
+  min-width: 300px;
 }
 
 .easy-text h2 {
@@ -224,14 +227,19 @@
   background: #8ee2b1;
 }
 
+.easy-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
 .easy-image img {
   width: 90%;
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin: auto; /* Center image */
 }
 
-/* Our Work in 3 Steps */
+/* Work Steps */
 .work-steps {
   text-align: center;
   padding: 100px 20px;
@@ -258,7 +266,6 @@
   width: 300px;
   padding: 40px 25px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
 }
 
 .step:hover {
@@ -272,22 +279,37 @@
   margin-bottom: 25px;
 }
 
+.step h3 {
+  font-size: 1.3rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.step p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 /* Footer Styles */
 footer {
   background-color: #000;
   color: #fff;
-  padding: 40px 20px 20px;
+  padding: 40px 0 20px;
   font-family: Arial, sans-serif;
-  text-align: center;
 }
 
 .footer-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
+  justify-content: space-between;
   max-width: 1200px;
   margin: auto;
+  flex-wrap: wrap;
+}
+
+.footer-container div {
+  flex: 1;
+  margin: 10px;
 }
 
 .footer-logo {
