@@ -6,7 +6,7 @@
   font-family: 'inter', sans-serif;
 }
 
-/* Hero Section */
+/* Header Section */
 .hero {
   background: url("../images/house_image.png") center/cover no-repeat;
   height: 70vh;
@@ -107,7 +107,7 @@
   object-fit: cover;
 }
 
-/* Easy Method Section */
+/* The Easiest Method Section */
 .easy-method {
   display: flex;
   align-items: center;
@@ -161,7 +161,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Work Steps Section */
+/* Our Work in 3 Steps */
 .work-steps {
   text-align: center;
   padding: 100px 20px;
@@ -184,11 +184,30 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+.step img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 25px;
+}
+
+.step h3 {
+  font-size: 1.3rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.step p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 /* Footer */
 footer {
   background-color: #000;
   color: #fff;
   padding: 40px 0 20px;
+  font-family: Arial, sans-serif;
 }
 
 .footer-container {
