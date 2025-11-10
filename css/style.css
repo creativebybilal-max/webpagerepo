@@ -7,6 +7,7 @@
 }
 
 /* Header Section */
+
 .hero {
   background: url("../images/house_image.png") center/cover no-repeat;
   height: 70vh;
@@ -23,7 +24,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 60px;
-  background: rgba(49, 49, 49, 0.3);
+  background: rgba(49, 49, 49, 0.3);   /* light transparent black */
   backdrop-filter: blur(6px);
   width: 100%;
 }
@@ -36,6 +37,15 @@
 .logo {
   width: 80px;
   margin-right: 20px;
+}.navbar {
+  padding-left: 85px; /* default 80px tha */
+}
+
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
 }
 
 .nav-links {
@@ -80,13 +90,13 @@
   position: absolute;
   top: 60%;
   left: 5%;
-  transform: translateY(-65%);
+  transform: translateY(-65%); /* Increase this percentage to move content up */
   color: #fff;
 }
 
 .hero-content h1 {
   font-size: 3rem;
-  line-height: 1.4;
+  line-height: 1.4; /* increase number for more gap (1.2 - 1.6 range is good) */
 }
 
 .hero-content p {
@@ -95,6 +105,7 @@
   line-height: 1.7;
 }
 
+/* Your existing button styling */
 .explore-btn {
   background: #3fdfaf;
   color: black;
@@ -104,13 +115,12 @@
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease
 }
 
 .explore-btn:hover {
   background: white;
 }
-
 /* Most Viewed Section */
 .most-viewed {
   padding: 80px 60px;
@@ -184,8 +194,7 @@
   background: #fff;
   border: 2px solid #3fdfaf;
 }
-
-/* Easy Method Section */
+/* The Easiest Method Section */
 .easy-method {
   display: flex;
   align-items: center;
@@ -238,8 +247,7 @@
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
-/* Work in 3 Steps */
+/* Our Work in 3 Steps */
 .work-steps {
   text-align: center;
   padding: 100px 20px;
@@ -252,6 +260,7 @@
   margin-bottom: 60px;
 }
 
+/* Step Cards */
 .steps-container {
   display: flex;
   justify-content: center;
@@ -271,6 +280,7 @@
 .step:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    
 }
 
 .step img {
@@ -290,10 +300,9 @@
   font-size: 0.95rem;
   line-height: 1.6;
 }
-
 /* Footer Styles */
 footer {
-  background-color: #000;
+  background-color: #000; /* Black background */
   color: #fff;
   padding: 40px 0 20px;
   font-family: Arial, sans-serif;
@@ -312,16 +321,21 @@ footer {
   margin: 10px;
 }
 
+/* Logo */
 .footer-logo {
-  width: 90px;
+  width: 90px;       /* Decreased from 150px to 100px */
   margin-bottom: 15px;
 }
 
+
+
+/* Headings */
 .footer-container h3 {
   margin-bottom: 15px;
   color: #fff;
 }
 
+/* Text & Links */
 .footer-container p, 
 .footer-container li, 
 .footer-container a {
@@ -343,6 +357,7 @@ footer {
   color: #fff;
 }
 
+/* Social Icons */
 .social-icons a img {
   width: 25px;
   margin-right: 15px;
@@ -350,12 +365,13 @@ footer {
 }
 
 .social-icons a img:hover {
-  transform: scale(1.2);
+  transform: scale(1.2); /* Slight zoom on hover */
 }
 
+/* Footer Bottom */
 .footer-bottom {
   text-align: center;
   margin-top: 20px;
   font-size: 13px;
-  color: #999;
+  color: #999;
 }
