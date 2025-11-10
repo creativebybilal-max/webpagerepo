@@ -1,32 +1,40 @@
-/* General Reset */
+/* ===================================
+   General Reset
+=================================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'inter', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
-/* Header Section */
+body {
+  overflow-x: hidden;
+}
 
+/* ===================================
+   Header Section
+=================================== */
 .hero {
   background: url("../images/house_image.png") center/cover no-repeat;
   height: 70vh;
   color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   position: relative;
 }
 
-/* Navigation Bar */
+/* ===================================
+   Navigation Bar
+=================================== */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 60px;
-  background: rgba(49, 49, 49, 0.3);   /* light transparent black */
+  padding: 15px 60px;
+  background: rgba(49, 49, 49, 0.3);
   backdrop-filter: blur(6px);
+  position: fixed;
   width: 100%;
+  z-index: 1000;
 }
 
 .logo-area {
@@ -36,16 +44,6 @@
 
 .logo {
   width: 80px;
-  margin-right: 20px;
-}.navbar {
-  padding-left: 85px; /* default 80px tha */
-}
-
-
-.brand-name {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: white;
 }
 
 .nav-links {
@@ -68,62 +66,78 @@
   color: #3fdfaf;
 }
 
-.navbar .try-now-btn {
+.try-now-btn {
   background: transparent;
-  color: #ffffff;
+  color: white;
   border: 2px solid #3fdfaf;
   border-radius: 50px;
   padding: 10px 25px;
-  font-size: 1rem;
-  font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.navbar .try-now-btn:hover {
+.try-now-btn:hover {
   background: #3fdfaf;
-  color: #000;
+  color: black;
 }
 
-/* Header Content */
+/* Hamburger Menu (Mobile) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+/* ===================================
+   Hero Content
+=================================== */
 .hero-content {
   position: absolute;
   top: 60%;
   left: 5%;
-  transform: translateY(-65%); /* Increase this percentage to move content up */
-  color: #fff;
+  transform: translateY(-65%);
 }
 
 .hero-content h1 {
   font-size: 3rem;
-  line-height: 1.4; /* increase number for more gap (1.2 - 1.6 range is good) */
+  line-height: 1.4;
 }
 
 .hero-content p {
   font-size: 1.3rem;
   margin-bottom: 20px;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
-/* Your existing button styling */
 .explore-btn {
   background: #3fdfaf;
   color: black;
   padding: 12px 30px;
   border: none;
   border-radius: 30px;
-  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease
+  transition: background 0.3s ease;
 }
 
 .explore-btn:hover {
   background: white;
 }
-/* Most Viewed Section */
+
+/* ===================================
+   Most Viewed Section
+=================================== */
 .most-viewed {
-  padding: 80px 60px;
+  padding: 100px 60px;
   background-color: #f8f8f8;
   text-align: center;
 }
@@ -143,7 +157,6 @@
 .property-container {
   display: flex;
   justify-content: center;
-  align-items: stretch;
   gap: 30px;
   flex-wrap: wrap;
 }
@@ -191,10 +204,13 @@
 }
 
 .btn-view:hover {
-  background: #fff;
+  background: white;
   border: 2px solid #3fdfaf;
 }
-/* The Easiest Method Section */
+
+/* ===================================
+   Easy Method Section
+=================================== */
 .easy-method {
   display: flex;
   align-items: center;
@@ -207,6 +223,7 @@
 .easy-text {
   flex: 1;
   min-width: 300px;
+  margin-bottom: 20px;
 }
 
 .easy-text h2 {
@@ -224,7 +241,7 @@
 
 .easy-text .btn {
   background: #3fdfaf;
-  color: #000000;
+  color: #000;
   padding: 12px 30px;
   border-radius: 30px;
   text-decoration: none;
@@ -245,9 +262,12 @@
 .easy-image img {
   width: 90%;
   border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-/* Our Work in 3 Steps */
+
+/* ===================================
+   Work in 3 Steps
+=================================== */
 .work-steps {
   text-align: center;
   padding: 100px 20px;
@@ -260,7 +280,6 @@
   margin-bottom: 60px;
 }
 
-/* Step Cards */
 .steps-container {
   display: flex;
   justify-content: center;
@@ -269,9 +288,9 @@
 }
 
 .step {
-  background: #fff;
+  background: white;
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   width: 300px;
   padding: 40px 25px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -279,8 +298,7 @@
 
 .step:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .step img {
@@ -300,12 +318,14 @@
   font-size: 0.95rem;
   line-height: 1.6;
 }
-/* Footer Styles */
+
+/* ===================================
+   Footer
+=================================== */
 footer {
-  background-color: #000; /* Black background */
+  background-color: #000;
   color: #fff;
   padding: 40px 0 20px;
-  font-family: Arial, sans-serif;
 }
 
 .footer-container {
@@ -321,27 +341,22 @@ footer {
   margin: 10px;
 }
 
-/* Logo */
 .footer-logo {
-  width: 90px;       /* Decreased from 150px to 100px */
+  width: 90px;
   margin-bottom: 15px;
 }
 
-
-
-/* Headings */
 .footer-container h3 {
   margin-bottom: 15px;
   color: #fff;
 }
 
-/* Text & Links */
-.footer-container p, 
-.footer-container li, 
+.footer-container p,
+.footer-container li,
 .footer-container a {
   color: #ccc;
-  text-decoration: none;
   font-size: 14px;
+  text-decoration: none;
 }
 
 .footer-links ul {
@@ -357,7 +372,6 @@ footer {
   color: #fff;
 }
 
-/* Social Icons */
 .social-icons a img {
   width: 25px;
   margin-right: 15px;
@@ -365,13 +379,66 @@ footer {
 }
 
 .social-icons a img:hover {
-  transform: scale(1.2); /* Slight zoom on hover */
+  transform: scale(1.2);
 }
 
-/* Footer Bottom */
 .footer-bottom {
   text-align: center;
   margin-top: 20px;
   font-size: 13px;
-  color: #999;
+  color: #999;
+}
+
+/* ===================================
+   Responsive
+=================================== */
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .easy-method {
+    padding: 60px 5%;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .easy-image img {
+    width: 100%;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(49,49,49,0.95);
+    position: absolute;
+    top: 65px;
+    right: 60px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .property-card {
+    width: 100%;
+  }
+
+  .steps-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
