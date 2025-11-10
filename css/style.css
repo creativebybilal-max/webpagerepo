@@ -1,20 +1,13 @@
-/* ===================================
-   General Reset
-=================================== */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'inter', sans-serif;
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  overflow-x: hidden;
-}
+/* Header Section */
 
-/* ===================================
-   Header Section
-=================================== */
 .hero {
   background: url("../images/house_image.png") center/cover no-repeat;
   height: 70vh;
@@ -25,31 +18,57 @@ body {
   position: relative;
 }
 
-/* ===================================
-   Navigation Bar
-=================================== */
+/* Navigation Bar */
 .navbar {
-  padding: 10px 60px !important;
-  background: rgba(49, 49, 49, 0.3) !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px;
+  background: rgba(49, 49, 49, 0.3);   /* light transparent black */
   backdrop-filter: blur(6px);
+  width: 100%;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
   width: 80px;
-  margin-right: 10px;
+  margin-right: 20px;
+}.navbar {
+  padding-left: 85px; /* default 80px tha */
 }
 
-.nav-link {
-  color: white !important;
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
-.nav-link:hover {
-  color: #3fdfaf !important;
+.nav-links a:hover {
+  color: #3fdfaf;
 }
 
-.try-now-btn {
+.navbar .try-now-btn {
   background: transparent;
   color: #ffffff;
   border: 2px solid #3fdfaf;
@@ -61,25 +80,23 @@ body {
   transition: all 0.3s ease;
 }
 
-.try-now-btn:hover {
+.navbar .try-now-btn:hover {
   background: #3fdfaf;
   color: #000;
 }
 
-/* ===================================
-   Hero Content
-=================================== */
+/* Header Content */
 .hero-content {
   position: absolute;
   top: 60%;
   left: 5%;
-  transform: translateY(-65%);
+  transform: translateY(-65%); /* Increase this percentage to move content up */
   color: #fff;
 }
 
 .hero-content h1 {
   font-size: 3rem;
-  line-height: 1.4;
+  line-height: 1.4; /* increase number for more gap (1.2 - 1.6 range is good) */
 }
 
 .hero-content p {
@@ -88,6 +105,7 @@ body {
   line-height: 1.7;
 }
 
+/* Your existing button styling */
 .explore-btn {
   background: #3fdfaf;
   color: black;
@@ -97,18 +115,15 @@ body {
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease
 }
 
 .explore-btn:hover {
   background: white;
 }
-
-/* ===================================
-   Most Viewed Section
-=================================== */
+/* Most Viewed Section */
 .most-viewed {
-  padding: 80px 0;
+  padding: 80px 60px;
   background-color: #f8f8f8;
   text-align: center;
 }
@@ -125,10 +140,19 @@ body {
   margin-bottom: 50px;
 }
 
+.property-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
 .property-card {
   background: white;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 300px;
   overflow: hidden;
   transition: transform 0.3s ease;
 }
@@ -170,13 +194,19 @@ body {
   background: #fff;
   border: 2px solid #3fdfaf;
 }
-
-/* ===================================
-   Easy Method Section
-=================================== */
+/* The Easiest Method Section */
 .easy-method {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 100px 10%;
   background-color: #ffffff;
+  flex-wrap: wrap;
+}
+
+.easy-text {
+  flex: 1;
+  min-width: 300px;
 }
 
 .easy-text h2 {
@@ -206,15 +236,18 @@ body {
   background: #8ee2b1;
 }
 
+.easy-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
 .easy-image img {
-  width: 100%;
+  width: 90%;
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
-/* ===================================
-   Work in 3 Steps
-=================================== */
+/* Our Work in 3 Steps */
 .work-steps {
   text-align: center;
   padding: 100px 20px;
@@ -227,10 +260,19 @@ body {
   margin-bottom: 60px;
 }
 
+/* Step Cards */
+.steps-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
 .step {
   background: #fff;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
   padding: 40px 25px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -238,6 +280,7 @@ body {
 .step:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    
 }
 
 .step img {
@@ -257,12 +300,9 @@ body {
   font-size: 0.95rem;
   line-height: 1.6;
 }
-
-/* ===================================
-   Footer
-=================================== */
+/* Footer Styles */
 footer {
-  background-color: #000;
+  background-color: #000; /* Black background */
   color: #fff;
   padding: 40px 0 20px;
   font-family: Arial, sans-serif;
@@ -271,22 +311,33 @@ footer {
 .footer-container {
   display: flex;
   justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
   flex-wrap: wrap;
-  gap: 30px;
 }
 
+.footer-container div {
+  flex: 1;
+  margin: 10px;
+}
+
+/* Logo */
 .footer-logo {
-  width: 90px;
+  width: 90px;       /* Decreased from 150px to 100px */
   margin-bottom: 15px;
 }
 
+
+
+/* Headings */
 .footer-container h3 {
   margin-bottom: 15px;
   color: #fff;
 }
 
-.footer-container p,
-.footer-container li,
+/* Text & Links */
+.footer-container p, 
+.footer-container li, 
 .footer-container a {
   color: #ccc;
   text-decoration: none;
@@ -306,6 +357,7 @@ footer {
   color: #fff;
 }
 
+/* Social Icons */
 .social-icons a img {
   width: 25px;
   margin-right: 15px;
@@ -313,29 +365,13 @@ footer {
 }
 
 .social-icons a img:hover {
-  transform: scale(1.2);
+  transform: scale(1.2); /* Slight zoom on hover */
 }
 
+/* Footer Bottom */
 .footer-bottom {
   text-align: center;
   margin-top: 20px;
   font-size: 13px;
   color: #999;
-}
-
-/* ===================================
-   Responsive Tweaks
-=================================== */
-@media (max-width: 992px) {
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-  }
-
-  .easy-method {
-    padding: 60px 5%;
-  }
 }
