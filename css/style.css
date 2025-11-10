@@ -7,15 +7,14 @@
 }
 
 /* Header Section */
+
 .hero {
   background: url("../images/house_image.png") center/cover no-repeat;
   height: 70vh;
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center vertically */
-  align-items: center;     /* Center horizontally */
-  text-align: center;      /* Center text */
+  justify-content: space-between;
   position: relative;
 }
 
@@ -38,6 +37,15 @@
 .logo {
   width: 80px;
   margin-right: 20px;
+}.navbar {
+  padding-left: 85px; /* default 80px tha */
+}
+
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
 }
 
 .nav-links {
@@ -78,9 +86,17 @@
 }
 
 /* Header Content */
+.hero-content {
+  position: absolute;
+  top: 60%;
+  left: 5%;
+  transform: translateY(-65%); /* Increase this percentage to move content up */
+  color: #fff;
+}
+
 .hero-content h1 {
   font-size: 3rem;
-  line-height: 1.4;
+  line-height: 1.4; /* increase number for more gap (1.2 - 1.6 range is good) */
 }
 
 .hero-content p {
@@ -105,7 +121,6 @@
 .explore-btn:hover {
   background: white;
 }
-
 /* Most Viewed Section */
 .most-viewed {
   padding: 80px 60px;
@@ -179,7 +194,6 @@
   background: #fff;
   border: 2px solid #3fdfaf;
 }
-
 /* The Easiest Method Section */
 .easy-method {
   display: flex;
@@ -233,7 +247,6 @@
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
 /* Our Work in 3 Steps */
 .work-steps {
   text-align: center;
@@ -267,6 +280,7 @@
 .step:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    
 }
 
 .step img {
@@ -286,7 +300,6 @@
   font-size: 0.95rem;
   line-height: 1.6;
 }
-
 /* Footer Styles */
 footer {
   background-color: #000; /* Black background */
@@ -310,9 +323,11 @@ footer {
 
 /* Logo */
 .footer-logo {
-  width: 90px;
+  width: 90px;       /* Decreased from 150px to 100px */
   margin-bottom: 15px;
 }
+
+
 
 /* Headings */
 .footer-container h3 {
@@ -358,5 +373,5 @@ footer {
   text-align: center;
   margin-top: 20px;
   font-size: 13px;
-  color: #999;
+  color: #999;
 }
