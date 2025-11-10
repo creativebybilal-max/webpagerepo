@@ -8,12 +8,8 @@
   font-family: 'Inter', sans-serif;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 /* ===================================
-   Header Section
+   Hero Section
 =================================== */
 .hero {
   background: url("../images/house_image.png") center/cover no-repeat;
@@ -22,89 +18,12 @@ body {
   position: relative;
 }
 
-/* ===================================
-   Navigation Bar
-=================================== */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 60px;
-  background: rgba(49, 49, 49, 0.3);
-  backdrop-filter: blur(6px);
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
-}
-
-.logo-area {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  width: 80px;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-}
-
-.nav-links li {
-  margin: 0 15px;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #3fdfaf;
-}
-
-.try-now-btn {
-  background: transparent;
-  color: white;
-  border: 2px solid #3fdfaf;
-  border-radius: 50px;
-  padding: 10px 25px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.try-now-btn:hover {
-  background: #3fdfaf;
-  color: black;
-}
-
-/* Hamburger Menu (Mobile) */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
-
-.hamburger span {
-  display: block;
-  height: 3px;
-  width: 25px;
-  background-color: white;
-  border-radius: 3px;
-}
-
-/* ===================================
-   Hero Content
-=================================== */
 .hero-content {
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 5%;
-  transform: translateY(-65%);
+  transform: translateY(-50%);
+  color: #fff;
 }
 
 .hero-content h1 {
@@ -115,7 +34,6 @@ body {
 .hero-content p {
   font-size: 1.3rem;
   margin-bottom: 20px;
-  line-height: 1.6;
 }
 
 .explore-btn {
@@ -124,6 +42,7 @@ body {
   padding: 12px 30px;
   border: none;
   border-radius: 30px;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -134,54 +53,44 @@ body {
 }
 
 /* ===================================
+   Navbar Custom Styles
+=================================== */
+.navbar .try-now-btn {
+  border-radius: 50px;
+  border: 2px solid #3fdfaf;
+  color: #fff;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.navbar .try-now-btn:hover {
+  background: #3fdfaf;
+  color: #000;
+}
+
+/* ===================================
    Most Viewed Section
 =================================== */
 .most-viewed {
-  padding: 100px 60px;
-  background-color: #f8f8f8;
+  padding: 80px 0;
   text-align: center;
-}
-
-.section-title h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  color: #222;
-}
-
-.section-title p {
-  color: #555;
-  font-size: 1.1rem;
-  margin-bottom: 50px;
-}
-
-.property-container {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
 }
 
 .property-card {
   background: white;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  width: 300px;
-  overflow: hidden;
   transition: transform 0.3s ease;
+  overflow: hidden;
+  padding-bottom: 20px;
 }
 
 .property-card:hover {
   transform: translateY(-10px);
 }
 
-.property-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
 .property-card h3 {
-  margin: 15px 0 5px;
+  margin-top: 15px;
   color: #333;
 }
 
@@ -192,65 +101,52 @@ body {
 }
 
 .btn-view {
-  display: inline-block;
-  margin-bottom: 20px;
-  background: #3fdfaf;
-  color: black;
-  padding: 10px 25px;
   border-radius: 30px;
-  text-decoration: none;
   font-weight: 600;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn-view:hover {
-  background: white;
-  border: 2px solid #3fdfaf;
+  background: #fff !important;
+  border: 2px solid #3fdfaf !important;
+  color: black !important;
 }
 
 /* ===================================
-   Easy Method Section
+   The Easiest Method Section
 =================================== */
 .easy-method {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 100px 10%;
-  background-color: #ffffff;
   flex-wrap: wrap;
 }
 
 .easy-text {
   flex: 1;
   min-width: 300px;
-  margin-bottom: 20px;
 }
 
 .easy-text h2 {
   font-size: 2rem;
-  color: #333;
   margin-bottom: 20px;
 }
 
 .easy-text p {
   font-size: 1rem;
-  color: #555;
   margin-bottom: 30px;
   line-height: 1.6;
 }
 
 .easy-text .btn {
-  background: #3fdfaf;
-  color: #000;
-  padding: 12px 30px;
   border-radius: 30px;
-  text-decoration: none;
   font-weight: 500;
   transition: background 0.3s ease;
 }
 
 .easy-text .btn:hover {
-  background: #8ee2b1;
+  background: #8ee2b1 !important;
 }
 
 .easy-image {
@@ -266,18 +162,11 @@ body {
 }
 
 /* ===================================
-   Work in 3 Steps
+   Work in 3 Steps Section
 =================================== */
 .work-steps {
   text-align: center;
   padding: 100px 20px;
-  background-color: #f8f8f8;
-}
-
-.work-steps h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 60px;
 }
 
 .steps-container {
@@ -288,7 +177,7 @@ body {
 }
 
 .step {
-  background: white;
+  background: #fff;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   width: 300px;
@@ -320,12 +209,13 @@ body {
 }
 
 /* ===================================
-   Footer
+   Footer Section
 =================================== */
 footer {
   background-color: #000;
   color: #fff;
   padding: 40px 0 20px;
+  font-family: Arial, sans-serif;
 }
 
 .footer-container {
@@ -348,7 +238,6 @@ footer {
 
 .footer-container h3 {
   margin-bottom: 15px;
-  color: #fff;
 }
 
 .footer-container p,
@@ -390,7 +279,7 @@ footer {
 }
 
 /* ===================================
-   Responsive
+   Responsive Tweaks
 =================================== */
 @media (max-width: 992px) {
   .hero-content h1 {
@@ -403,42 +292,5 @@ footer {
 
   .easy-method {
     padding: 60px 5%;
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-
-  .easy-image img {
-    width: 100%;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: rgba(49,49,49,0.95);
-    position: absolute;
-    top: 65px;
-    right: 60px;
-    padding: 20px;
-    border-radius: 10px;
-    width: 200px;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-}
-
-@media (max-width: 768px) {
-  .property-card {
-    width: 100%;
-  }
-
-  .steps-container {
-    flex-direction: column;
-    align-items: center;
   }
 }
