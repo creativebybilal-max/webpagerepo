@@ -12,12 +12,41 @@
   height: 70vh;
   color: white;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
 }
 
-/* Hero Content */
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px;
+  background: rgba(49, 49, 49, 0.3);
+  backdrop-filter: blur(6px);
+  width: 100%;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 80px;
+  margin-right: 20px;
+}
+
+/* Header Content */
+.hero-content {
+  position: absolute;
+  top: 60%;
+  left: 5%;
+  transform: translateY(-65%);
+  color: #fff;
+}
+
 .hero-content h1 {
   font-size: 3rem;
   line-height: 1.4;
@@ -28,49 +57,159 @@
   margin-bottom: 20px;
 }
 
-.hero-content .btn-success {
+.explore-btn {
+  background: #3fdfaf;
+  color: black;
   padding: 12px 30px;
+  border: none;
   border-radius: 30px;
+  font-size: 1rem;
   font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-/* Property Cards */
+.explore-btn:hover {
+  background: white;
+}
+
+/* Most Viewed Section */
+.most-viewed {
+  padding: 80px 60px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.property-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.property-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 300px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-10px);
+}
+
 .property-card img {
+  width: 100%;
   height: 200px;
   object-fit: cover;
 }
 
-.property-card .btn-success {
-  border-radius: 30px;
-  padding: 10px 25px;
-  font-weight: 600;
+/* Easy Method Section */
+.easy-method {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 10%;
+  background-color: #ffffff;
+  flex-wrap: wrap;
 }
 
-/* Easy Method Section */
-.easy-method h2 {
+.easy-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.easy-text h2 {
   font-size: 2rem;
+  color: #333;
   margin-bottom: 20px;
 }
 
-.easy-method p {
+.easy-text p {
   font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
   line-height: 1.6;
 }
 
-.easy-method .btn-success {
+.easy-text .btn {
+  background: #3fdfaf;
+  color: #000000;
+  padding: 12px 30px;
   border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
 }
 
-/* Steps Section */
-.step img {
-  margin-bottom: 15px;
+.easy-text .btn:hover {
+  background: #8ee2b1;
+}
+
+.easy-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.easy-image img {
+  width: 90%;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Work Steps Section */
+.work-steps {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #f8f8f8;
+}
+
+.step {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 40px 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  margin: 15px;
+}
+
+.step:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Footer */
-footer a:hover {
-  color: #3fdfaf;
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 0 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
 }
 
 .footer-logo {
   width: 90px;
+}
+
+footer a:hover {
+  color: #3fdfaf;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #999;
 }
