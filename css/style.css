@@ -311,7 +311,7 @@
   background: #fff;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 30px;
+  width: 350px;
   padding: 40px 25px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
