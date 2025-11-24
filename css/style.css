@@ -95,16 +95,22 @@
 }
 
 .hero-content h1 {
-  font-size: 3rem;
-  line-height: 1.4; /* increase number for more gap (1.2 - 1.6 range is good) */
+  font-size: 64px;
+  line-height: 1.2; /* increase number for more gap (1.2 - 1.6 range is good) */
 }
 
 .hero-content p {
-  font-size: 1.3rem;
-  margin-bottom: 20px;
-  line-height: 1.7;
+  font-size: 27.04px;
+  margin-bottom: 25px;
+  line-height: 32.4px;
 }
+    header h1 {
+      margin-bottom: 20px;
+    }
 
+    header p {
+      margin-top: 20px;
+    }
 /* Your existing button styling */
 .explore-btn {
   background: #3fdfaf;
@@ -115,12 +121,41 @@
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease
+  transition: background 0.3s ease;
 }
+.explore-btn + .explore-btn {
+  margin-left: 20px; /* jitna space chaho utna rakh sakte ho */
+}
+.explore-btn {
+  background: #3fdfaf;
+  color: #000;
+  padding: 12px 32px;
+  border: 2px solid transparent;   /* Important Fix */
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(63, 223, 175, 0.4);
+}
+/* Space between buttons */
+
+
 
 .explore-btn:hover {
-  background: white;
+  background: transparent;
+  border: 2px solid #3fdfaf;
+  color: #fff;
+  box-shadow: 0 6px 15px rgba(63, 223, 175, 0.3);
+  transform: translateY(-3px);
 }
+
+
+/* ADD THIS */
+.explore-btn:first-child {
+  margin-right: 15px;
+}
+  
 /* Most Viewed Section */
 .most-viewed {
   padding: 80px 60px;
@@ -129,15 +164,15 @@
 }
 
 .section-title h2 {
-  font-size: 2.5rem;
+  font-size: 60.5px;
   margin-bottom: 10px;
   color: #222;
 }
 
 .section-title p {
-  color: #555;
-  font-size: 1.1rem;
-  margin-bottom: 50px;
+  color: #000;
+  font-size: 23.82px;
+  margin-bottom: 10px;
 }
 
 .property-container {
@@ -169,11 +204,11 @@
 
 .property-card h3 {
   margin: 15px 0 5px;
-  color: #333;
+  color: #000;
 }
 
 .property-card p {
-  color: #666;
+  color: #000;
   font-size: 0.95rem;
   margin-bottom: 15px;
 }
@@ -193,6 +228,8 @@
 .btn-view:hover {
   background: #fff;
   border: 2px solid #3fdfaf;
+
+  
 }
 /* The Easiest Method Section */
 .easy-method {
@@ -205,21 +242,21 @@
 }
 
 .easy-text {
-  flex: 1;
+  flex: 10px;
   min-width: 300px;
 }
 
 .easy-text h2 {
-  font-size: 2rem;
-  color: #333;
+  font-size: 57.18px;
+  color: #000;
   margin-bottom: 20px;
 }
 
 .easy-text p {
-  font-size: 1rem;
-  color: #555;
+  font-size: 27.4px;
+  color: #000;
   margin-bottom: 30px;
-  line-height: 1.6;
+  line-height: 32.4px;
 }
 
 .easy-text .btn {
@@ -233,7 +270,9 @@
 }
 
 .easy-text .btn:hover {
-  background: #8ee2b1;
+  background: transparent;
+  color: #000;
+  border: 2px solid #3fdfaf;
 }
 
 .easy-image {
@@ -255,13 +294,13 @@
 }
 
 .work-steps h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #333;
   margin-bottom: 60px;
 }
 
 /* Step Cards */
-.steps-container {
+.steps-container { 
   display: flex;
   justify-content: center;
   gap: 40px;
@@ -290,22 +329,22 @@
 }
 
 .step h3 {
-  font-size: 1.3rem;
+  font-size: 20.83px;
   color: #222;
   margin-bottom: 10px;
 }
 
 .step p {
-  color: #666;
-  font-size: 0.95rem;
-  line-height: 1.6;
+  color: #000;
+  font-size: 27.4px;
+  line-height: 32.4px;
 }
 /* Footer Styles */
 footer {
   background-color: #000; /* Black background */
   color: #fff;
   padding: 40px 0 20px;
-  font-family: Arial, sans-serif;
+  font-family: inter, sans-serif;
 }
 
 .footer-container {
